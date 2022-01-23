@@ -453,10 +453,10 @@
 		let theoryOn = false
 		function theory() {
 			if (!theoryOn) {
-				
-			fetch('theory.html')
-			.then(data => data.text())
-			.then(html => document.querySelector('#theory-content').innerHTML = html);
+				theoryOn = true
+				fetch('theory.html')
+				.then(data => data.text())
+				.then(html => document.querySelector('#theory-content').innerHTML = html);
 			}
 		}
 
